@@ -21,6 +21,9 @@ html body header {
   justify-content: space-between;
   align-items: center;
   height: 80px;
+  position: sticky;
+  top: 0;
+  z-index: 11;
 }
 html body header span {
   font-size: 28rem;
@@ -481,12 +484,14 @@ html body main .top-artist-collection .top-artist-container .top-artist-items .f
   width: 120px;
 }
 html body main .trending-nft {
-  padding: 0 100px;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 html body main .trending-nft .trending-nft-title-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 100px;
 }
 html body main .trending-nft .trending-nft-title-row .title-row-left {
   display: flex;
@@ -542,13 +547,18 @@ html body main .trending-nft .trending-nft-flex-container {
   margin-top: 50px;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
+  padding-left: 100px;
 }
 html body main .trending-nft .trending-nft-flex-container .trending-nft-flex-items {
   padding: 10px;
   background-color: #f9f9fa;
   border-radius: 20px;
+  margin-right: 30px;
 }
 html body main .trending-nft .trending-nft-flex-container .trending-nft-flex-items .trending-nft-img {
+  width: 224px;
+  height: 264px;
   border-radius: 20px;
 }
 html body main .trending-nft .trending-nft-flex-container .trending-nft-flex-items .collection-name p {
@@ -577,6 +587,306 @@ html body main .trending-nft .trending-nft-flex-container .trending-nft-flex-ite
   color: #a6b8cf;
   font-size: 14rem;
   font-weight: 200;
+}
+html body main .art-list {
+  display: flex;
+  height: 500px;
+  padding: 0 100px;
+}
+html body main .art-list img {
+  border-radius: 20px;
+}
+html body main .art-list .art-list-flex-item1 {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+html body main .art-list .art-list-flex-item1 .info {
+  display: inline-block;
+  padding: 15px;
+  background: #f9f9fa;
+  border-radius: 20px;
+}
+html body main .art-list .art-list-flex-item1 .info p {
+  color: #a6b8cf;
+}
+html body main .art-list .art-list-flex-item1 .info i {
+  color: #FED144;
+  background-color: black;
+  border-radius: 50%;
+}
+html body main .art-list .art-list-flex-item2 {
+  width: 25%;
+  margin-right: 30px;
+}
+html body main .art-list .art-list-flex-item2 .info {
+  display: inline-block;
+  padding: 15px;
+  background: #f9f9fa;
+  border-radius: 20px;
+}
+html body main .art-list .art-list-flex-item2 .info p {
+  color: #a6b8cf;
+}
+html body main .art-list .art-list-flex-item2 .info i {
+  color: #FED144;
+  background-color: black;
+  border-radius: 50%;
+}
+html body main .art-list .art-list-right {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+html body main .art-list .art-list-right h1 {
+  font-size: 35rem;
+}
+html body main .art-list .art-list-right p {
+  margin: 20px 0;
+}
+html body main .art-list .art-list-right span {
+  display: flex;
+}
+html body main .art-list .art-list-right span .artist-btn1 {
+  font-weight: bold;
+  padding: 10px 20px;
+  margin-right: 20px;
+  text-decoration: none;
+  color: white;
+  background-image: linear-gradient(to right, #F53DF5, #0698F9);
+}
+html body main .art-list .art-list-right span .artist-btn2 {
+  position: relative;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  background-image: linear-gradient(to right, #F53DF5, #0698F9);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 3px solid;
+  -o-border-image: linear-gradient(to right, #3918FF, #DB00FF);
+     border-image: linear-gradient(to right, #3918FF, #DB00FF);
+  border-image-slice: 1;
+  border-radius: 10px;
+}
+html body main .browse-category {
+  padding: 0 100px;
+}
+html body main .browse-category h1 {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 36px;
+}
+html body main .browse-category .browse-flex-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  row-gap: 24px;
+  justify-content: space-between;
+}
+html body main .browse-category .browse-flex-container .browse-flex-item {
+  position: relative;
+  width: 272px;
+  height: 242px;
+  padding: 10px;
+  display: inline-block;
+  background-color: #f9f9fa;
+  border-radius: 20px;
+}
+html body main .browse-category .browse-flex-container .browse-flex-item .img-stack {
+  position: relative;
+  width: 250px;
+  height: 220px;
+  display: inline-block;
+  border-radius: 20px;
+  background-image: linear-gradient(to right, #cc74cc, #51a2d8);
+}
+html body main .browse-category .browse-flex-container .browse-flex-item .img-stack .browse-category-item1-img1 {
+  position: absolute;
+  left: 20px;
+  bottom: 0;
+  z-index: 2;
+}
+html body main .browse-category .browse-flex-container .browse-flex-item .img-stack .browse-category-item1-img2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  border-top-right-radius: 20px;
+}
+html body main .browse-category .browse-flex-container .browse-flex-item .img-stack .browse-category-item1-img3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  border-bottom-left-radius: 20px;
+}
+html body main .browse-category .browse-flex-container .browse-flex-item .img-stack .floating-text {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  z-index: 4;
+  width: 226px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.589);
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+}
+html body main .browse-category .browse-flex-container .browse-flex-item .img-stack .floating-text h3 {
+  font-size: 16rem;
+  font-weight: 700;
+}
+html body main .premier-marketplace {
+  display: flex;
+  align-items: center;
+  padding: 132px 100px;
+}
+html body main .premier-marketplace .premier-marketplace-left {
+  width: 50%;
+}
+html body main .premier-marketplace .premier-marketplace-left p {
+  color: #11315B;
+  margin: 28px 0;
+}
+html body main .premier-marketplace .premier-marketplace-left .learn-more-btn {
+  border: 3px solid #a6b8cf;
+  padding: 5px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #11315B;
+  margin-right: 30px;
+}
+html body main .premier-marketplace .premier-marketplace-right {
+  width: 47%;
+  display: grid;
+  grid-template-columns: auto auto;
+  -moz-column-gap: 45px;
+       column-gap: 45px;
+  grid-template-rows: auto;
+}
+html body main .premier-marketplace .premier-marketplace-right img {
+  border-radius: 12px;
+}
+html body main .premier-marketplace .premier-marketplace-right .premier-marketplace-big-img {
+  grid-column: 1/2;
+  grid-row: 1/span 2;
+}
+html body main .premier-marketplace .premier-marketplace-right .premier-marketplace-small-img {
+  grid-column: 2/3;
+}
+html body main .premier-marketplace .premier-marketplace-right .premier-marketplace-smaller-img {
+  grid-column: 2/2;
+  grid-row: 2/2;
+}
+html body main .why-nft {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0 100px;
+  padding: 50px;
+  background-image: url("../images/index/error404-image.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  width: 1150px;
+  height: 417px;
+}
+html body main .why-nft .darkbackground {
+  position: absolute;
+  width: 1150px;
+  height: 417px;
+  left: 0;
+  border-radius: 20px;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.493), black);
+}
+html body main .why-nft .why-nft-left {
+  width: 50%;
+  padding-right: 120px;
+  position: relative;
+  z-index: 2;
+}
+html body main .why-nft .why-nft-left h1 {
+  font-size: 35rem;
+  color: white;
+}
+html body main .why-nft .why-nft-left p {
+  margin: 30px 0;
+  color: white;
+}
+html body main .why-nft .why-nft-left .marketplace-btn {
+  text-decoration: none;
+  color: white;
+  padding: 10px 5px 10px 15px;
+  border-radius: 10px;
+  background-image: linear-gradient(to right, #F53DF5, #0698F9);
+}
+html body main .why-nft .why-nft-left .marketplace-btn .fa-arrow-right {
+  color: white;
+}
+html body main .why-nft .why-nft-right {
+  display: block;
+  width: 50%;
+  height: 313px;
+  border-radius: 20px;
+  position: relative;
+  z-index: 2;
+  background-image: url("../images/index/why-nft-youtube-big-image.png");
+}
+html body main .why-nft .why-nft-right .fa-youtube-big {
+  color: red;
+  position: absolute;
+  left: 43%;
+  top: 35%;
+}
+html body main .why-nft .why-nft-right .watch-info {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 238px;
+  height: 50px;
+  padding: 0 5px;
+  border-top-right-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.521);
+}
+html body main .why-nft .why-nft-right .watch-info a {
+  color: white;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+html body main .why-nft .why-nft-right .watch-info a h2 {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+html body main .why-nft .why-nft-right .watch-info a .fa-youtube {
+  color: white;
+  text-decoration: none;
+  margin: 0 5px;
+}
+html body main .why-nft .why-nft-right div {
+  display: flex;
+  color: white;
+  font-size: 13rem;
+  padding: 10px;
+  align-items: center;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+html body main .why-nft .why-nft-right div .about-vid-info {
+  font-size: 22rem;
+  font-weight: bold;
+  border: 3px solid white;
+  border-radius: 10px;
+  padding: 0 10px;
+  margin-right: 10px;
+  color: white;
 }
 html body footer {
   background-color: #21204A;
