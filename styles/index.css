@@ -8,6 +8,8 @@ html {
   font-size: 1px;
 }
 html body {
+  max-width: 1440px;
+  margin: 0 auto;
   font-size: 16rem;
   color: white;
   font-family: "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -43,13 +45,15 @@ html body header nav .connect-wallet-btn {
   padding: 10px;
 }
 html body main {
+  color: #21204A;
   background-color: #e0e9f0;
 }
 html body main .hero-section {
   background-color: #21204A;
-  height: calc(100vh - 80px);
+  height: 570px;
   padding: 0 100px;
   display: flex;
+  color: white;
 }
 html body main .hero-section .hero-left {
   width: 45%;
@@ -98,10 +102,11 @@ html body main .hero-section .hero-right .hero-right-img .collection-name {
   left: 70px;
   z-index: 2;
   position: absolute;
-  transform: rotate(33deg);
+  transform: rotate(34deg);
+  color: white;
 }
 html body main .hero-section .hero-right .hero-right-img .collection-name p {
-  color: #BDCADB;
+  transform: skewX(-20deg);
 }
 html body main .hero-section .hero-right .hero-right-img .hero-img {
   position: absolute;
@@ -172,7 +177,7 @@ html body main .hot-auction .hot-auction-flex-container {
 }
 html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items {
   padding: 10px;
-  background-color: #f0f4f7;
+  background-color: #f9f9fa;
   border-radius: 20px;
 }
 html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items .hot-section-img {
@@ -235,6 +240,343 @@ html body main .hot-auction .hot-auction-flex-container .hot-auction-flex-items 
   font-size: 14rem;
   color: #a6b8cf;
   margin-left: 5px;
+}
+html body main .popular-collection {
+  padding: 0 100px;
+}
+html body main .popular-collection .popular-collection-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+html body main .popular-collection .popular-collection-title-row .title-row-left {
+  display: flex;
+}
+html body main .popular-collection .popular-collection-title-row .title-row-left h1 {
+  margin-right: 40px;
+}
+html body main .popular-collection .popular-collection-title-row .title-row-left select {
+  padding: 10px;
+  background-color: #b5d5ff;
+  border: 0;
+  border-radius: 10px;
+}
+html body main .popular-collection .popular-collection-title-row .title-row-left select option {
+  background-color: #e0e9f0;
+  font-size: 17rem;
+  padding: 10px 0;
+}
+html body main .popular-collection .popular-collection-title-row .title-row-left .title-row-days {
+  display: flex;
+  padding: 10px;
+  background-color: #b5d5ff;
+  border: 0;
+  border-radius: 10px;
+  margin-left: 60px;
+}
+html body main .popular-collection .popular-collection-title-row .title-row-left .title-row-days p {
+  color: black;
+  margin: 0 10px;
+}
+html body main .popular-collection .popular-collection-title-row .title-row-right {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+html body main .popular-collection .popular-collection-title-row .title-row-right .auction-see-all-link {
+  border: 3px solid #a6b8cf;
+  padding: 5px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #a6b8cf;
+  margin-right: 30px;
+}
+html body main .popular-collection .popular-collection-title-row .title-row-right button {
+  padding: 10px;
+  border: 2px solid #a6b8cf;
+  border-radius: 10px;
+  color: #a6b8cf;
+  margin-left: 10px;
+}
+html body main .popular-collection .popular-collection-flex-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items {
+  padding: 10px;
+  background-color: #f9f9fa;
+  border-radius: 20px;
+}
+html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items img {
+  border-radius: 10px;
+}
+html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .img-section {
+  display: flex;
+}
+html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .img-section .img-section-left {
+  margin-right: 10px;
+}
+html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .img-section .img-section-right {
+  display: grid;
+}
+html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .img-section .img-section-right .img-section-small-img {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .img-section .img-section-right span {
+  position: relative;
+}
+html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .img-section .img-section-right span .more-img {
+  -webkit-filter: blur(1px);
+  margin-left: 8px;
+}
+html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .img-section .img-section-right span h3 {
+  position: absolute;
+  z-index: 1;
+  left: 30%;
+  top: 30%;
+  color: white;
+}
+html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .info-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .info-section h2 {
+  font-size: 17rem;
+}
+html body main .popular-collection .popular-collection-flex-container .popular-collection-flex-items .info-section p {
+  color: #a6b8cf;
+  font-size: 15rem;
+}
+html body main .top-artist-collection {
+  padding: 0 100px;
+}
+html body main .top-artist-collection .top-artist-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+html body main .top-artist-collection .top-artist-title-row .top-artist-left {
+  display: flex;
+}
+html body main .top-artist-collection .top-artist-title-row .top-artist-left h1 {
+  margin-right: 40px;
+}
+html body main .top-artist-collection .top-artist-title-row .top-artist-left select {
+  padding: 10px;
+  background-color: #b5d5ff;
+  border: 0;
+  border-radius: 10px;
+}
+html body main .top-artist-collection .top-artist-title-row .top-artist-left select option {
+  background-color: #e0e9f0;
+  font-size: 17rem;
+  padding: 10px 0;
+}
+html body main .top-artist-collection .top-artist-title-row .top-artist-left .title-row-days {
+  display: flex;
+  padding: 10px;
+  background-color: #b5d5ff;
+  border: 0;
+  border-radius: 10px;
+  margin-left: 60px;
+}
+html body main .top-artist-collection .top-artist-title-row .top-artist-left .title-row-days p {
+  color: black;
+  margin: 0 10px;
+}
+html body main .top-artist-collection .top-artist-title-row .top-artist-right {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+html body main .top-artist-collection .top-artist-title-row .top-artist-right .auction-see-all-link {
+  border: 3px solid #a6b8cf;
+  padding: 5px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #a6b8cf;
+}
+html body main .top-artist-collection .top-artist-title-row .top-artist-right button {
+  padding: 10px;
+  border: 2px solid #a6b8cf;
+  border-radius: 10px;
+  color: #a6b8cf;
+  margin-left: 10px;
+}
+html body main .top-artist-collection .top-artist-container {
+  padding: 50px 0;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+  row-gap: 30px;
+  -moz-column-gap: 26px;
+       column-gap: 26px;
+}
+html body main .top-artist-collection .top-artist-container .top-artist-items {
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 365px;
+}
+html body main .top-artist-collection .top-artist-container .top-artist-items .profile-pics {
+  display: flex;
+  align-items: center;
+}
+html body main .top-artist-collection .top-artist-container .top-artist-items .profile-pics .profile-verified {
+  margin-left: 10px;
+  position: relative;
+}
+html body main .top-artist-collection .top-artist-container .top-artist-items .profile-pics .profile-verified img {
+  border-radius: 50%;
+  border: 3px solid white;
+}
+html body main .top-artist-collection .top-artist-container .top-artist-items .profile-pics .profile-verified .fa-circle-check {
+  color: #FED144;
+  background-color: black;
+  border-radius: 50%;
+  border: 0;
+  position: absolute;
+  bottom: 10px;
+  right: 1px;
+}
+html body main .top-artist-collection .top-artist-container .top-artist-items .profile-name h3 {
+  font-size: 17rem;
+}
+html body main .top-artist-collection .top-artist-container .top-artist-items .profile-name p {
+  color: #818083;
+  font-size: 15rem;
+  font-weight: 500;
+}
+html body main .top-artist-collection .top-artist-container .top-artist-items .followers {
+  color: #a6b8cf;
+  font-size: 12rem;
+  text-align: right;
+}
+html body main .top-artist-collection .top-artist-container .top-artist-items .followers .followers-display-pic {
+  position: relative;
+}
+html body main .top-artist-collection .top-artist-container .top-artist-items .followers .followers-display-pic .followers-display-pic1 {
+  position: absolute;
+  right: 30px;
+  z-index: 2;
+}
+html body main .top-artist-collection .top-artist-container .top-artist-items .followers .followers-display-pic .followers-display-pic2 {
+  position: absolute;
+  right: 15px;
+  z-index: 1;
+}
+html body main .top-artist-collection .top-artist-container .top-artist-items .followers .followers-display-pic .followers-display-pic3 {
+  position: relative;
+  z-index: 0;
+}
+html body main .top-artist-collection .top-artist-container .top-artist-items .followers p {
+  width: 120px;
+}
+html body main .trending-nft {
+  padding: 0 100px;
+}
+html body main .trending-nft .trending-nft-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+html body main .trending-nft .trending-nft-title-row .title-row-left {
+  display: flex;
+}
+html body main .trending-nft .trending-nft-title-row .title-row-left h1 {
+  margin-right: 40px;
+}
+html body main .trending-nft .trending-nft-title-row .title-row-left select {
+  padding: 10px;
+  background-color: #b5d5ff;
+  border: 0;
+  border-radius: 10px;
+}
+html body main .trending-nft .trending-nft-title-row .title-row-left select option {
+  background-color: #e0e9f0;
+  font-size: 17rem;
+  padding: 10px 0;
+}
+html body main .trending-nft .trending-nft-title-row .title-row-left .title-row-days {
+  display: flex;
+  padding: 10px;
+  background-color: #b5d5ff;
+  border: 0;
+  border-radius: 10px;
+  margin-left: 60px;
+}
+html body main .trending-nft .trending-nft-title-row .title-row-left .title-row-days p {
+  color: black;
+  margin: 0 10px;
+}
+html body main .trending-nft .trending-nft-title-row .title-row-right {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+html body main .trending-nft .trending-nft-title-row .title-row-right .auction-see-all-link {
+  border: 3px solid #a6b8cf;
+  padding: 5px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #a6b8cf;
+  margin-right: 30px;
+}
+html body main .trending-nft .trending-nft-title-row .title-row-right button {
+  padding: 10px;
+  border: 2px solid #a6b8cf;
+  border-radius: 10px;
+  color: #a6b8cf;
+  margin-left: 10px;
+}
+html body main .trending-nft .trending-nft-flex-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+html body main .trending-nft .trending-nft-flex-container .trending-nft-flex-items {
+  padding: 10px;
+  background-color: #f9f9fa;
+  border-radius: 20px;
+}
+html body main .trending-nft .trending-nft-flex-container .trending-nft-flex-items .trending-nft-img {
+  border-radius: 20px;
+}
+html body main .trending-nft .trending-nft-flex-container .trending-nft-flex-items .collection-name p {
+  color: #a6b8cf;
+  font-size: 14rem;
+}
+html body main .trending-nft .trending-nft-flex-container .trending-nft-flex-items .collection-name h3 {
+  font-size: 15rem;
+}
+html body main .trending-nft .trending-nft-flex-container .trending-nft-flex-items .current-bid {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  background-color: #e0e9f0;
+  border-radius: 10px;
+  padding: 10px;
+}
+html body main .trending-nft .trending-nft-flex-container .trending-nft-flex-items .current-bid p {
+  color: #a6b8cf;
+  font-size: 14rem;
+}
+html body main .trending-nft .trending-nft-flex-container .trending-nft-flex-items .current-bid h4 {
+  font-size: 15rem;
+}
+html body main .trending-nft .trending-nft-flex-container .trending-nft-flex-items .current-bid h5 {
+  color: #a6b8cf;
+  font-size: 14rem;
+  font-weight: 200;
 }
 html body footer {
   background-color: #21204A;

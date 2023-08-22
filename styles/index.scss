@@ -9,14 +9,17 @@
 $bg-color: #21204A;
 $font-color: white;
 $font-color2: #a6b8cf;
+$font-color3:#21204A;
 $main-bg-color: #e0e9f0;
-$inside-flex-item-bg-color:#f0f4f7;
+$inside-flex-item-bg-color: #f9f9fa;
 $font-type: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 html {
     font-size: 1px;
 
     body {
+        max-width: 1440px;
+        margin: 0 auto;
         font-size: 16rem;
         color: $font-color;
         font-family: $font-type;
@@ -58,13 +61,15 @@ html {
         }
 
         main {
+            color: $font-color3;
             background-color: $main-bg-color;
 
             .hero-section {
                 background-color: $bg-color;
-                height: calc(100vh - 80px);
+                height: 570px;
                 padding: 0 100px;
                 display: flex;
+                color: white;
 
                 .hero-left {
                     width: 45%;
@@ -123,10 +128,11 @@ html {
                             left: 70px;
                             z-index: 2;
                             position: absolute;
-                            transform: rotate(33deg);
+                            transform: rotate(34deg);
+                            color: white;
 
                             p {
-                                color: #BDCADB;
+                                transform:  skewX(-20deg);
                             }
                         }
 
@@ -145,47 +151,50 @@ html {
                     }
                 }
             }
-            .hot-auction{
+
+            .hot-auction {
                 color: black;
                 padding: 100px;
 
-                .hot-auction-title-row{
+                .hot-auction-title-row {
                     width: 100%;
                     display: flex;
                     justify-content: space-between;
 
-                    .hot-auction-title-left{
+                    .hot-auction-title-left {
                         display: flex;
                         width: 50%;
                         // border: 1px solid red;
 
-                        h1{
+                        h1 {
                             background-image: linear-gradient(to right, #F53DF5, #0698F9);
                             background-clip: text;
                             -webkit-text-fill-color: transparent;
                             margin-right: 40px;
                         }
-                        select{
+
+                        select {
                             // width: x;
                             padding: 0 10px;
                             background-color: #b5d5ff;
                             border: 0;
                             border-radius: 10px;
 
-                            option{
+                            option {
                                 background-color: $main-bg-color;
                                 font-size: 17rem;
                                 padding: 10px 0;
                             }
                         }
                     }
-                    .hot-auction-title-right{
+
+                    .hot-auction-title-right {
                         width: 50%;
                         display: flex;
                         justify-content: flex-end;
                         align-items: center;
 
-                        .auction-see-all-link{
+                        .auction-see-all-link {
                             border: 3px solid $font-color2;
                             padding: 5px 20px;
                             border-radius: 10px;
@@ -193,7 +202,8 @@ html {
                             color: $font-color2;
                             margin-right: 30px;
                         }
-                        button{
+
+                        button {
                             padding: 10px;
                             border: 2px solid $font-color2;
                             border-radius: 10px;
@@ -202,76 +212,83 @@ html {
                         }
                     }
                 }
-                .hot-auction-flex-container{
+
+                .hot-auction-flex-container {
                     margin-top: 50px;
                     display: flex;
                     justify-content: space-between;
 
-                    .hot-auction-flex-items{
+                    .hot-auction-flex-items {
                         padding: 10px;
-                        background-color:$inside-flex-item-bg-color;
-                        border-radius:20px ;
+                        background-color: $inside-flex-item-bg-color;
+                        border-radius: 20px;
 
-                        .hot-section-img{
+                        .hot-section-img {
                             border-radius: 20px;
                         }
-                        .collection-name{
-                            p{
+
+                        .collection-name {
+                            p {
                                 color: $font-color2;
                                 font-size: 14rem;
                             }
-                            h3{
+
+                            h3 {
                                 font-size: 15rem;
                             }
                         }
 
-                        .current-bid{
+                        .current-bid {
                             display: flex;
                             justify-content: space-between;
                             margin: 15px 0;
 
-                            p{
+                            p {
                                 color: $font-color2;
                                 font-size: 14rem;
                             }
-                            h4{
+
+                            h4 {
                                 font-size: 15rem;
                             }
-                            h5{
+
+                            h5 {
                                 color: $font-color2;
                                 font-size: 14rem;
                                 font-weight: 200;
                             }
                         }
 
-                        .profile-avatar{
+                        .profile-avatar {
                             display: flex;
                             justify-content: space-between;
-                            border-top: 2px solid ;
+                            border-top: 2px solid;
                             border-image: linear-gradient(to right, #3918FF, #DB00FF);
                             border-image-slice: 1;
-                            padding: 10px 0; 
+                            padding: 10px 0;
 
-                            .profile-avatar-left{
+                            .profile-avatar-left {
                                 display: flex;
                                 align-items: center;
-                                
-                                p{
+
+                                p {
                                     color: $font-color2;
                                     margin-left: 10px;
                                 }
                             }
-                            .profile-avatar-right{
+
+                            .profile-avatar-right {
                                 display: flex;
                                 align-items: center;
 
-                                i{
+                                i {
                                     font-size: 25rem;
                                     background-image: linear-gradient(to right, #F53DF5, #0698F9);
                                     background-clip: text;
                                     -webkit-text-fill-color: transparent;
                                 }
-                                p{
+
+                                p {
                                     letter-spacing: 0;
                                     font-size: 14rem;
                                     color: $font-color2;
@@ -282,9 +299,419 @@ html {
                     }
                 }
             }
+
+            .popular-collection {
+                padding:0 100px;
+
+                .popular-collection-title-row {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .title-row-left {
+                        display: flex;
+
+                        h1 {
+                            // background-image: linear-gradient(to right, #F53DF5, #0698F9);
+                            // background-clip: text;
+                            // -webkit-text-fill-color: transparent;
+                            margin-right: 40px;
+                        }
+
+                        select {
+                            padding: 10px;
+                            background-color: #b5d5ff;
+                            border: 0;
+                            border-radius: 10px;
+
+                            option {
+                                background-color: $main-bg-color;
+                                font-size: 17rem;
+                                padding: 10px 0;
+                            }
+                        }
+
+                        .title-row-days {
+                            display: flex;
+                            padding: 10px;
+                            background-color: #b5d5ff;
+                            border: 0;
+                            border-radius: 10px;
+                            margin-left: 60px;
+
+                            p {
+                                color: black;
+                                margin: 0 10px;
+                            }
+                        }
+                    }
+
+                    .title-row-right {
+                        width: 20%;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+
+                        .auction-see-all-link {
+                            border: 3px solid $font-color2;
+                            padding: 5px 20px;
+                            border-radius: 10px;
+                            text-decoration: none;
+                            color: $font-color2;
+                            margin-right: 30px;
+                        }
+
+                        button {
+                            padding: 10px;
+                            border: 2px solid $font-color2;
+                            border-radius: 10px;
+                            color: $font-color2;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+
+                .popular-collection-flex-container {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 50px 0;
+
+                    .popular-collection-flex-items {
+                        padding: 10px;
+                        background-color: $inside-flex-item-bg-color;
+                        border-radius: 20px;
+
+                        img{
+                            border-radius: 10px;
+                        }
+
+                        .img-section {
+                            display: flex;
+
+                            .img-section-left{
+                                margin-right: 10px;
+                            }
+
+                            .img-section-right {
+                                display: grid;
+
+                                .img-section-small-img {
+                                    grid-column-start: 1;
+                                    grid-column-end: 4;
+                                    grid-row-start: 1;
+                                    grid-row-end: 4;
+                                }
+                                
+                                span{
+                                    position: relative;
+                                    // border: 1px solid red;
+
+                                    .more-img{
+                                        -webkit-filter: blur(1px);
+                                        margin-left: 8px;
+                                    }
+                                    h3{
+                                        position: absolute;
+                                        z-index: 1;
+                                        left: 30%;
+                                        top: 30%;
+                                        color: white;
+                                    }
+                                }
+                            }
+                        }
+                        .info-section{
+                            display: flex;
+                            justify-content: space-between;
+                            padding: 10px 0;
+
+                            h2{
+                                font-size: 17rem;
+                            }
+                            p{
+                                color: $font-color2;
+                                font-size: 15rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .top-artist-collection {
+                padding:0 100px;
+
+                .top-artist-title-row {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .top-artist-left {
+                        display: flex;
+
+                        h1 {
+                            // background-image: linear-gradient(to right, #F53DF5, #0698F9);
+                            // background-clip: text;
+                            // -webkit-text-fill-color: transparent;
+                            margin-right: 40px;
+                        }
+
+                        select {
+                            padding: 10px;
+                            background-color: #b5d5ff;
+                            border: 0;
+                            border-radius: 10px;
+
+                            option {
+                                background-color: $main-bg-color;
+                                font-size: 17rem;
+                                padding: 10px 0;
+                            }
+                        }
+
+                        .title-row-days {
+                            display: flex;
+                            padding: 10px;
+                            background-color: #b5d5ff;
+                            border: 0;
+                            border-radius: 10px;
+                            margin-left: 60px;
+
+                            p {
+                                color: black;
+                                margin: 0 10px;
+                            }
+                        }
+                    }
+
+                    .top-artist-right {
+                        width: 20%;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+
+                        .auction-see-all-link {
+                            border: 3px solid $font-color2;
+                            padding: 5px 20px;
+                            border-radius: 10px;
+                            text-decoration: none;
+                            color: $font-color2;
+                        }
+
+                        button {
+                            padding: 10px;
+                            border: 2px solid $font-color2;
+                            border-radius: 10px;
+                            color: $font-color2;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+                .top-artist-container{
+                    padding: 50px 0;
+                    display: grid; 
+                    // max-width: 1224px;
+                    // border: 1px solid red;
+                    grid-template-columns: auto auto auto;
+                    grid-template-rows: auto auto ;
+                    row-gap: 30px;
+                    column-gap: 26px;
+
+                    .top-artist-items{
+                        padding-left: 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        // border: 1px solid red;
+                        width: 365px;
+
+                        .profile-pics{
+                            display: flex;
+                            align-items: center;
+
+                            .profile-verified{
+                                margin-left: 10px;
+                                position: relative;
+                                img{
+                                    border-radius: 50%;
+                                    border: 3px solid white;
+                                }
+                                .fa-circle-check{
+                                    color: #FED144;
+                                    background-color: black;
+                                    border-radius: 50%;
+                                    border: 0;
+                                    position: absolute;
+                                    bottom: 10px;
+                                    right: 1px;
+                                }
+                            }
+                        }
+                        .profile-name{
+                            // border: 1px solid red;
+                            
+                            h3{
+                                font-size: 17rem;
+                            }
+                            p{
+                                color:#818083;
+                                font-size: 15rem;
+                                font-weight: 500;
+                            }
+                        }
+                        .followers{
+                            color: $font-color2;
+                            font-size: 12rem;
+                            text-align: right;
+
+                            .followers-display-pic{
+                                position: relative;
+
+                                .followers-display-pic1{
+                                    position: absolute;
+                                    right: 30px;
+                                    z-index: 2;
+                                }
+                                .followers-display-pic2{
+                                    position: absolute;
+                                    right: 15px;
+                                    z-index: 1;
+                                }
+                                .followers-display-pic3{
+                                    position: relative;
+                                    z-index: 0;
+                                }
+                            }
+
+                            p{
+                            width: 120px;
+                            }
+                        }
+                    }
+                }
+            }
+            .trending-nft{
+                padding: 0 100px;
+
+                .trending-nft-title-row {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .title-row-left {
+                        display: flex;
+
+                        h1 {
+                            // background-image: linear-gradient(to right, #F53DF5, #0698F9);
+                            // background-clip: text;
+                            // -webkit-text-fill-color: transparent;
+                            margin-right: 40px;
+                        }
+
+                        select {
+                            padding: 10px;
+                            background-color: #b5d5ff;
+                            border: 0;
+                            border-radius: 10px;
+
+                            option {
+                                background-color: $main-bg-color;
+                                font-size: 17rem;
+                                padding: 10px 0;
+                            }
+                        }
+
+                        .title-row-days {
+                            display: flex;
+                            padding: 10px;
+                            background-color: #b5d5ff;
+                            border: 0;
+                            border-radius: 10px;
+                            margin-left: 60px;
+
+                            p {
+                                color: black;
+                                margin: 0 10px;
+                            }
+                        }
+                    }
+
+                    .title-row-right {
+                        width: 20%;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+
+                        .auction-see-all-link {
+                            border: 3px solid $font-color2;
+                            padding: 5px 20px;
+                            border-radius: 10px;
+                            text-decoration: none;
+                            color: $font-color2;
+                            margin-right: 30px;
+                        }
+
+                        button {
+                            padding: 10px;
+                            border: 2px solid $font-color2;
+                            border-radius: 10px;
+                            color: $font-color2;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+                .trending-nft-flex-container {
+                    margin-top: 50px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    .trending-nft-flex-items {
+                        padding: 10px;
+                        background-color: $inside-flex-item-bg-color;
+                        border-radius: 20px;
+
+                        .trending-nft-img {
+                            border-radius: 20px;
+                        }
+
+                        .collection-name {
+                            p {
+                                color: $font-color2;
+                                font-size: 14rem;
+                            }
+
+                            h3 {
+                                font-size: 15rem;
+                            }
+                        }
+
+                        .current-bid {
+                            display: flex;
+                            justify-content: space-between;
+                            margin: 10px 0;
+                            background-color: $main-bg-color;
+                            border-radius: 10px;
+                            padding: 10px;
+
+                            p {
+                                color: $font-color2;
+                                font-size: 14rem;
+                            }
+
+                            h4 {
+                                font-size: 15rem;
+                            }
+
+                            h5 {
+                                color: $font-color2;
+                                font-size: 14rem;
+                                font-weight: 200;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
-        footer{
+        footer {
             background-color: $bg-color;
             padding: 50px 100px;
             display: flex;
@@ -292,9 +719,10 @@ html {
             // align-items: center;
             height: 373px;
 
-            .footer-left{
+            .footer-left {
                 width: 40%;
-                div{
+
+                div {
                     span {
                         font-size: 28rem;
                         font-weight: bold;
@@ -303,59 +731,64 @@ html {
                         padding: 0 10px;
                         margin-right: 20px;
                     }
-                    a{
+
+                    a {
                         color: $font-color;
                         font-size: 25rem;
                         text-decoration: none;
                     }
                 }
-                p{
+
+                p {
                     padding: 0 150px 0 0;
                     margin-top: 30px;
                     font-size: 15px;
                     color: $font-color2;
                 }
             }
-            .footer-right{
+
+            .footer-right {
                 width: 60%;
                 display: flex;
                 justify-content: space-between;
 
-                ul{
+                ul {
                     list-style: none;
 
-                    li{
+                    li {
                         padding: 10px 0;
 
-                        .footer-nav-links{
+                        .footer-nav-links {
                             color: $font-color2;
                             text-decoration: none;
                         }
                     }
                 }
-                .newsletter-section{
 
-                    form{
-                        position:relative;
+                .newsletter-section {
+
+                    form {
+                        position: relative;
                         height: 44px;
                         width: 356px;
                         margin: 30px 0 60px;
 
-                        input{
+                        input {
                             position: absolute;
                             width: 356px;
                             height: 44px;
                             border-radius: 10px;
-                            border: 0px solid ;
+                            border: 0px solid;
                             background-color: #7d7c80;
                             color: $font-color;
                             padding: 0 10px;
 
-                            &::placeholder{
+                            &::placeholder {
                                 color: $font-color;
                             }
                         }
-                        .subscribe-btn{
+
+                        .subscribe-btn {
                             position: absolute;
                             right: 3px;
                             top: 3px;
@@ -367,11 +800,13 @@ html {
                             background-color: #CDE2FE;
                         }
                     }
-                    span{
-                        h3{
+
+                    span {
+                        h3 {
                             margin-bottom: 30px;
                         }
-                        i{
+
+                        i {
                             margin: 0 8px 0 0;
                             font-size: 25px;
                         }
